@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamentos Marcados - Salão de Beleza</title>
+  <link rel="stylesheet" href="/style.css"> 
+</head>
+
+<body>
+  <div class="container">
+    <h2>Agendamentos Marcados</h2>
+
+    <ul id="lista-agendamentos"></ul>
+
+    <button onclick="window.location.href = 'index.html';">Voltar ao Agendamento</button>
+  </div>
+
+  <script src="/script.js"></script> 
+  <script>
+    async function getAgendamentos() {
+      const response = await fetch('/api.php'); 
+      const data = await response.json();
+      return data;
+    }
+
+    
+    async function atualizarLista() {
+      const lista = document.getElementById("lista-agendamentos");
+      lista.innerHTML = "";
+
+      const agendamentos = await getAgendamentos();
+
+      if (agendamentos.length === 0) {
+        lista.innerHTML = "<li>Não há agendamentos.</li>";
+        return;
+      }
+
+      agendamentos.forEach((ag) => {
+        lista.innerHTML += `
+          <li>
+            ${ag.data_hora} - ${ag.cliente} (${ag.servico})
+          </li>
+        `;
+      });
+    }
+
+   
+    document.addEventListener("DOMContentLoaded", atualizarLista);
+  </script>
+</body>
+
+</html>

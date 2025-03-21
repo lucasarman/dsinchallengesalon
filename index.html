@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento - Salão de Beleza</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form>
+    <div class="container">
+      <h2>Agendamento de Serviços</h2>
+      <input type="text" id="cliente" placeholder="Nome do Cliente" required>
+      <input type="date" id="data" required>
+      <input type="time" id="horario" required>
+      <select id="servico" required>
+        <option value="corte">Corte</option>
+        <option value="pintura">Pintura</option>
+        <option value="hidratação">Hidratação</option>
+      </select>
+      <button type="button" onclick="agendar()">Agendar</button>
+
+      <h3>Agendamentos</h3>
+      <ul id="lista-agendamentos"></ul>
+
+      <button onclick="window.location.href = 'agendamentos.html';">Ver Agendamentos Marcados</button>
+    </div>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

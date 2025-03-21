@@ -1,0 +1,119 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #f3e5f5, #d1c4e9); 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+h2 {
+  font-size: 28px;
+  color: #8e44ad;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+input, select, button {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1a6e7;
+  background: #fafafa;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+input:focus, select:focus {
+  border-color: #8e44ad;
+  box-shadow: 0 0 5px rgba(142, 68, 173, 0.5);
+  outline: none;
+}
+
+
+button {
+  background-color: #8e44ad;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #732d91;
+}
+
+
+h3 {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #8e44ad;
+  font-weight: bold;
+}
+
+ul#lista-agendamentos {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+}
+
+ul#lista-agendamentos li {
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+
+ul#lista-agendamentos button {
+  background-color: #d1a6e7;
+  color: white;
+  border: none;
+  padding: 6px 8px; 
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; 
+  transition: background-color 0.3s ease;
+  display: inline-block; 
+}
+
+ul#lista-agendamentos button:hover {
+  background-color: #8e44ad;
+}
+
+
+ul#lista-agendamentos li span {
+  display: inline-block;
+  flex-grow: 1; 
+  text-align: left;
+  margin-right: 10px; 
+  font-weight: bold; 
+}
